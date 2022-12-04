@@ -1,0 +1,3 @@
+http://en.wikipedia.org/wiki/Docstring
+https://en.wikipedia.org/wiki/First-class_citizen
+https://en.wikipedia.org/wiki/First-class_function

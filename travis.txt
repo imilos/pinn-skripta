@@ -1,0 +1,9 @@
+https://felipefaria.medium.com/sphinx-travis-ci-github-pages-full-integration-for-auto-docs-publishing-91ce93179e17
+
+https://amarder.github.io/using-travis-ci-to-build-sphinx-docs/
+
+https://sphinxtechnicalwriting.readthedocs.io/en/latest/cd/config-travis.html
+
+https://github.com/Syntaf/travis-sphinx
+
+Само куцај: travis sphinx github и искочиће
