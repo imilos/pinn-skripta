@@ -22,31 +22,3 @@
 
 * Guido van Rossum *et al.*, *Python 3 Documentation: Language/Library Reference and Tutorial*, The Python Software Foundation, `<http://docs.python.org>`_
 
-
-
-.. raw:: latex
-
-   \clearpage{\thispagestyle{empty}}
-   \null\vfill
-   \vspace{7pt}\noindent\hrulefill\vspace{7pt}\newline
-   \noindent CIP \sphinxhyphen{} Каталогизација у публикацији -- Народна библиотека Србије, Београд\newline
-
-   \bigskip
-   \noindent004.42.045(075.8)\newline
-   \noindent004.43PYTHON(075.8)\newline
-
-   \bigskip
-   \noindentМИЛОВАНОВИЋ, Владимир, 1981\sphinxhyphen{}\newline
-   \hspace*{25pt}Компоновање рачунарских програма / Владимир Миловановић. -- Крагујевац :\newline
-   \hspace{\parindent}Факултет инжењерских наука Универзитета, 2021 (Крагујевац : ИнтерПринт). -- II, 250 стр. : илустр. ; 24 cm
-
-   \bigskip
-   \noindentТираж 100. --- Библиографија: стр. 249.
-
-   \bigskip
-   \noindent ISBN 978\sphinxhyphen{}86\sphinxhyphen{}6335\sphinxhyphen{}081\sphinxhyphen{}6
-
-   \bigskip
-   \noindent a) Објектно оријентисано програмирање b) Програмски језик ``Python''\newline
-   \noindent COBISS.SR\sphinxhyphen{}ID 37829641\newline
-   \vspace{7pt}\noindent\hrulefill\vspace{7pt}\newline

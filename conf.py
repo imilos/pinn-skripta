@@ -134,123 +134,24 @@ htmlhelp_basename = 'PINN'
 CCBYSAlogo = './LaTeXcustom/by-sa.eps'
 
 latex_additional_files = [CCBYSAlogo]
-latex_engine = 'pdflatex'
+latex_engine = 'xelatex'
 latex_elements = {
-    'extrapackages': r'\usepackage{CJKutf8}', # for title-page
-    #'extrapackages': r'\usepackage{tikz}\usetikzlibrary{automata}',
-    'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
-    #'fncychap': r'\usepackage[Lenny]{fncychap}',
-    'figure_align': 'htbp',
-    'fontenc': r'\usepackage[T2A,T1]{fontenc}',
     'fontpkg': r'''
-     \usepackage{lmodern}
-     \substitutefont{T2A}{\rmdefault}{cmr}
-     \substitutefont{T2A}{\sfdefault}{cmss}
-     \substitutefont{T2A}{\ttdefault}{cmtt}
-    ''',
-    'fvset': r'\fvset{fontsize=\small}', # or fontsize=auto
-    'geometry': r'\usepackage[paperwidth=170mm,paperheight=240mm]{geometry}',
-    'inputenc': r'\usepackage[utf8]{inputenc}',
-    #'maketitle': '\\cover',
-    #'maketitle':r'\newcommand\sphinxbackoftitlepage{<Extra material>}\sphinxmaketitle',
-    'maketitle': r'''
-     \newcommand\sphinxbackoftitlepage{
-     \noindent\sphinxstylestrong{Аутор}:\newline
-     др Милош Ивановић, ванредни професор\newline
-     Природно-математички факултет, Универзитет у Крагујевцу\newline
-     {\large\Letter} \href{mailto:mivanovic@kg.ac.rs}{\nolinkurl{mivanovic@kg.ac.rs}}
-
-     \bigskip
-     \vspace{7pt}\noindent\rule{\textwidth}{1pt}\vspace{7pt}
-     \centerline{\large{\MakeUppercase{\sphinxstylestrong{Неуронске мреже засноване на физичким законима}}}}
-     \vspace{7pt}\noindent\rule{\textwidth}{1pt}\vspace{7pt}
-
-     \bigskip
-     \noindent\sphinxstylestrong{Издавач}:\newline
-     Природно-математички факултет у Крагујевцу\newline
-     Радоја Домановића 12, 34000 Крагујевац, Србија
-
-     \smallskip
-     \noindent\sphinxstylestrong{За издавача}:\newline
-     проф. др Марија Станић, декан
-
-     \medskip
-     \noindent\sphinxstylestrong{Рецензенти}:\newline
-     др Бобан Стојановић, редовни професор\newline
-     др Александар Пеулић, редовни професор
-
-     \medskip
-     \vspace{7pt}\noindent\hrulefill\vspace{7pt}\newline
-     \noindentОдлуком Наставно\sphinxhyphen{}научног већа ПМФ-а број _____ од 2023. године ова књига одобрена је као основни универзитетски уџбеник.
-     \vspace{7pt}\noindent\hrulefill\vspace{7pt}
-
-     \medskip
-     \noindent\sphinxstylestrong{Штампа}:\newline
-     Графички центар \textsl{Сквер}, Крагујевац, 2023.
-
-     \smallskip
-     \noindent\sphinxstylestrong{Тираж}:\newline
-     100 примерака
-
-     \vfill
-     \noindent\sphinxstylestrong{ISBN}: 978-86-6335-081-6\newline
-
-     \bigskip
-     \sphinxincludegraphics{{by-sa}.eps}
-     Нека права задржана. Ово дело објављено је под условима Кријејтив комонс Ауторство\sphinxhyphen{}делити под истим условима 4.0 међународне лиценце (енг. \sphinxhref{http://creativecommons.org/licenses/by-sa/4.0}{Creative Commons Attribution\sphinxhyphen{}ShareAlike 4.0 International License} --- CC BY\sphinxhyphen{}SA).
-     }\sphinxmaketitle
-     \begin{CJK}{UTF8}{gbsn}
-    ''',
-    'atendofbody': r'\end{CJK}',
-    # The paper size ('a4paper', 'b5paper' or 'letterpaper').
-    #
-    #'papersize': 'a4paper',
-    'papersize': 'b5paper',
-
-    # The font size ('10pt', '11pt' or '12pt').
-    #
-    'pointsize': '10pt',
-
-    # Additional stuff for the LaTeX preamble.
-    #
-    # 'preamble': '',
-
-    #'babel': r'\usepackage[serbian]{babel}',
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+''',
     'preamble': r'''
-     % MarVoSym symbols
-     \newcommand{\mvs}{\fontfamily{mvs}\fontencoding{U}\fontseries{m}\fontshape{n}\selectfont}
-     \newcommand{\mvchr}[1]{{\mvs\char#1}}
-     \newcommand\Letter{\mvchr{66}}
-     % STIX math symbols
-     \DeclareFontEncoding{LS1}{}{}
-     \DeclareFontEncoding{LS2}{}{\noaccents@}
-     \DeclareFontSubstitution{LS1}{stix}{m}{n}
-     \DeclareFontSubstitution{LS2}{stix}{m}{n}
-     \DeclareSymbolFont{STIXarrows3}{LS2}{stixtt}{m}{n}
-     \DeclareSymbolFont{STIXsymbols4}{LS1}{stixbb}{m}{it}
-     \DeclareMathSymbol{\spadesuit}      {\mathord}{STIXarrows3}{"0F}
-     \DeclareMathSymbol{\heartsuit}      {\mathord}{STIXarrows3}{"10}
-     \DeclareMathSymbol{\diamondsuit}    {\mathord}{STIXarrows3}{"11}
-     \DeclareMathSymbol{\clubsuit}       {\mathord}{STIXarrows3}{"12}
-     \DeclareMathSymbol{\varspadesuit}   {\mathord}{STIXsymbols4}{"FD}
-     \DeclareMathSymbol{\varheartsuit}   {\mathord}{STIXsymbols4}{"FE}
-     \DeclareMathSymbol{\vardiamondsuit} {\mathord}{STIXsymbols4}{"FF}
-     \DeclareMathSymbol{\varclubsuit}    {\mathord}{STIXarrows3}{"2E}
-     \DeclareUnicodeCharacter{2660}{$\spadesuit$}
-     \DeclareUnicodeCharacter{2661}{$\heartsuit$}
-     \DeclareUnicodeCharacter{2662}{$\diamondsuit$}
-     \DeclareUnicodeCharacter{2663}{$\clubsuit$}
-     \DeclareUnicodeCharacter{2664}{$\varspadesuit$}
-     \DeclareUnicodeCharacter{2665}{$\varheartsuit$}
-     \DeclareUnicodeCharacter{2666}{$\vardiamondsuit$}
-     \DeclareUnicodeCharacter{2667}{$\varclubsuit$}
-    ''',
-    'releasename': 'издање:',
-    'printindex': r'\printindex',
-    #'printindex': r'\footnotesize\raggedright\printindex',
-    #'sphinxsetup': 'hmargin=55pt, vmargin=69pt', # this is for ISO b5paper 176 × 250 mm^2
-    'sphinxsetup': 'hmargin=48pt, vmargin=69pt', # this is for custom B5 170 × 240 mm^2
+\usepackage[titles]{tocloft}
+\cftsetpnumwidth {1.25cm}\cftsetrmarg{1.5cm}
+\setlength{\cftchapnumwidth}{0.75cm}
+\setlength{\cftsecindent}{\cftchapnumwidth}
+\setlength{\cftsecnumwidth}{1.25cm}
+''',
+    'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
+    'printindex': r'\footnotesize\raggedright\printindex',
 }
+latex_show_urls = 'footnote'
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
