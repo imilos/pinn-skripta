@@ -19,8 +19,7 @@
 
    predgovor/predgovor.rst
    glava1/index.rst
-   literatura/index.rst
-.. literatura/index.rst
+   literatura/literatura.rst
 
 .. Indices and tables
 .. ==================
