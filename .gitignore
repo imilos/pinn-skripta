@@ -1,0 +1,6 @@
+#
+# Ignorisi sve Sphinx generisane fajlove
+#
+html/
+tex/
+.vscode/
