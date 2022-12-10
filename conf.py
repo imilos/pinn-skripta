@@ -41,7 +41,7 @@ release = 'прво'
 #extensions = [
 #]
 extensions = ['sphinx.ext.coverage', 'sphinx.ext.doctest', 'sphinx.ext.githubpages', 
-              'sphinxcontrib.tikz', 'sphinxcontrib.bibtex']
+              'sphinxcontrib.bibtex']
 
 bibtex_bibfiles = ['refs.bib']
 
