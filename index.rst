@@ -18,7 +18,7 @@
    :caption: Садржај:
 
    predgovor/predgovor.rst
-   glava1/index.rst
+   uvod/index.rst
    literatura/literatura.rst
 
 .. Indices and tables

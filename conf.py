@@ -19,14 +19,14 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Неуронске мреже засноване на физици'
+project = 'Физички засноване неуронске мреже'
 copyright = '2022-2023, Милош Ивановић'
 author = 'Милош Ивановић'
 
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = 'прво штампано'
+release = 'прво'
 
 
 # -- General configuration ---------------------------------------------------
@@ -40,8 +40,10 @@ release = 'прво штампано'
 # ones.
 #extensions = [
 #]
-extensions = ['sphinx.ext.coverage', 'sphinx.ext.doctest', 'sphinx.ext.githubpages',
-              'sphinxcontrib.tikz']
+extensions = ['sphinx.ext.coverage', 'sphinx.ext.doctest', 'sphinx.ext.githubpages', 
+              'sphinxcontrib.tikz', 'sphinxcontrib.bibtex']
+
+bibtex_bibfiles = ['refs.bib']
 
 doctest_global_setup = '''
 try:
@@ -150,6 +152,7 @@ latex_elements = {
 ''',
     'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
     'printindex': r'\footnotesize\raggedright\printindex',
+    'papersize' : 'b5paper'
 }
 latex_show_urls = 'footnote'
 
@@ -173,13 +176,13 @@ latex_use_modindex = True
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-latex_documents = [(master_doc, 'pinn-skripta.tex', 'Неуронске мреже засноване на физици', 'Милош Ивановић', 'manual', True)]
+latex_documents = [(master_doc, 'pinn-skripta.tex', 'Физички засноване неуронске мреже', 'Милош Ивановић', 'manual', True)]
 
 # -- Options for manual page output ------------------------------------------
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [(master_doc, 'PINN', 'Неуронске мреже засноване на физици', [author], 1)]
+man_pages = [(master_doc, 'PINN', 'Физички засноване неуронске мреже', [author], 1)]
 
 # -- Options for Texinfo output ----------------------------------------------
 
@@ -187,13 +190,13 @@ man_pages = [(master_doc, 'PINN', 'Неуронске мреже заснова�
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'PINN', 'Неуронске мреже засноване на физици', author,
+    (master_doc, 'PINN', 'Физички засноване неуронске мреже', author,
      'PINN', 'One line description of project.', 'Miscellaneous'),
 ]
 
 # -- Options for TikZ Sphinx Extension ---------------------------------------
 
-#tikz_proc_suite = 'pdf2svg'
-#tikz_transparent = True
-#tikz_tikzlibraries = 'automata'
-#tikz_latex_preamble = '\\usepackage[T2A]{fontenc}'
+tikz_proc_suite = 'pdf2svg'
+tikz_transparent = True
+tikz_tikzlibraries = 'automata'
+tikz_latex_preamble = '\\usepackage[T2A]{fontenc}'
