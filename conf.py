@@ -19,7 +19,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Неуронске мреже засноване на физичким законима'
+project = 'Неуронске мреже засноване на физици'
 copyright = '2022-2023, Милош Ивановић'
 author = 'Милош Ивановић'
 
@@ -173,13 +173,13 @@ latex_use_modindex = True
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-latex_documents = [(master_doc, 'pinn-skripta.tex', 'Неуронске мреже засноване на физичким законима', 'Милош Ивановић', 'manual', True)]
+latex_documents = [(master_doc, 'pinn-skripta.tex', 'Неуронске мреже засноване на физици', 'Милош Ивановић', 'manual', True)]
 
 # -- Options for manual page output ------------------------------------------
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [(master_doc, 'PINN', 'Неуронске мреже засноване на физичким законима', [author], 1)]
+man_pages = [(master_doc, 'PINN', 'Неуронске мреже засноване на физици', [author], 1)]
 
 # -- Options for Texinfo output ----------------------------------------------
 
@@ -187,13 +187,13 @@ man_pages = [(master_doc, 'PINN', 'Неуронске мреже заснова�
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'PINN', 'Неуронске мреже засноване на физичким законима', author,
+    (master_doc, 'PINN', 'Неуронске мреже засноване на физици', author,
      'PINN', 'One line description of project.', 'Miscellaneous'),
 ]
 
 # -- Options for TikZ Sphinx Extension ---------------------------------------
 
-tikz_proc_suite = 'pdf2svg'
-tikz_transparent = True
-tikz_tikzlibraries = 'automata'
-tikz_latex_preamble = '\\usepackage[T2A]{fontenc}'
+#tikz_proc_suite = 'pdf2svg'
+#tikz_transparent = True
+#tikz_tikzlibraries = 'automata'
+#tikz_latex_preamble = '\\usepackage[T2A]{fontenc}'
