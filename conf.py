@@ -194,9 +194,5 @@ texinfo_documents = [
      'PINN', 'One line description of project.', 'Miscellaneous'),
 ]
 
-# -- Options for TikZ Sphinx Extension ---------------------------------------
-
-tikz_proc_suite = 'pdf2svg'
-tikz_transparent = True
-tikz_tikzlibraries = 'automata'
-tikz_latex_preamble = '\\usepackage[T2A]{fontenc}'
+# Enable numref
+numfig = True
