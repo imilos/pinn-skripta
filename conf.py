@@ -152,15 +152,16 @@ latex_elements = {
 ''',
     'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
     'printindex': r'\footnotesize\raggedright\printindex',
-    'papersize' : 'b5paper'
+    'papersize' : 'b5paper',
+    'pointsize':'10pt',
 }
 latex_show_urls = 'footnote'
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
 #
-# latex_logo = None
-latex_logo = './LaTeXcustom/bookwheel.jpg'
+latex_logo = None
+# latex_logo = './LaTeXcustom/bookwheel.jpg'
 
 # If true, show page references after internal links.
 #
@@ -194,5 +195,5 @@ texinfo_documents = [
      'PINN', 'One line description of project.', 'Miscellaneous'),
 ]
 
-# Enable numref
+# Omoguci numref
 numfig = True

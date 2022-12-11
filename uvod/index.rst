@@ -9,3 +9,5 @@
 
    1-istorija.rst
    2-metoda.rst
+   3-primer.rst
+   
