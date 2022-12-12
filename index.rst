@@ -14,10 +14,11 @@
 
 .. toctree::
    :maxdepth: 2
-   :caption: Садржај:
+   :caption: Садржај
 
    predgovor/predgovor.rst
    uvod/index.rst
+   toplota/index.rst
    literatura/literatura.rst
 
 .. Indices and tables
@@ -30,4 +31,4 @@
 .. image:: https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-sa.svg
     :align: center
 
-Нека права задржана. Ово дело обjављено jе под условима Криjеjтив комонс Ауторство-делити под истим условима 4.0 међународне лиценце (енг. `Creative Commons Attribution-ShareAlike 4.0 International License <http://creativecommons.org/licenses/by-sa/4.0>`_).
+Нека права задржана. Ово дело обjављено jе под условима Creative-Commons Ауторство-делити под истим условима 4.0 међународне лиценце (енг. `Creative Commons Attribution-ShareAlike 4.0 International License <http://creativecommons.org/licenses/by-sa/4.0>`_).

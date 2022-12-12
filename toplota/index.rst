@@ -1,12 +1,12 @@
-.. _uvod:
+.. _toplota:
 
 ***********************************************
- Увод
+ Провођење топлоте
 ***********************************************
 
 .. toctree::
    :maxdepth: 2
 
-   1-istorija.rst
-   2-metoda.rst
-   3-primer.rst
+   1-uvod.rst
+   2-sipka.rst
+   3-stefan.rst
