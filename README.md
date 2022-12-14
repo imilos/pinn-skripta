@@ -1,4 +1,4 @@
 # pinn-skripta
-Neuronske mreže zasnovane na fizičkim zakonima
+Fizički zasnovane neuronske mreže
 
 Prva verzija
