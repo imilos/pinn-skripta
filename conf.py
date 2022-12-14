@@ -45,6 +45,21 @@ extensions = ['sphinx.ext.coverage', 'sphinx.ext.doctest', 'sphinx.ext.githubpag
 
 bibtex_bibfiles = ['refs.bib']
 
+#########################################
+# Deo za kastomizaciju fonta za kodove
+#########################################
+from sphinx.highlighting import PygmentsBridge
+from pygments.formatters.latex import LatexFormatter
+
+class CustomLatexFormatter(LatexFormatter):
+    def __init__(self, **options):
+        super(CustomLatexFormatter, self).__init__(**options)
+        #self.verboptions = r"formatcom=\scriptsize"
+        self.verboptions = r"formatcom=\footnotesize"
+
+PygmentsBridge.latex_formatter = CustomLatexFormatter
+#########################################
+
 doctest_global_setup = '''
 try:
     import _tkinter
