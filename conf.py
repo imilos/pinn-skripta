@@ -213,3 +213,4 @@ texinfo_documents = [
 
 # Omoguci numref
 numfig = True
+numfig_format={'code-block': 'Листинг %s', }

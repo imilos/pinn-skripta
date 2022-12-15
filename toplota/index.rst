@@ -8,5 +8,6 @@
    :maxdepth: 2
 
    1-uvod.rst
-   2-sipka.rst
-   3-stefan.rst
+   2-stap.rst
+   3-stap-inv.rst
+   4-stefan.rst
