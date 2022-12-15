@@ -2,20 +2,23 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="623.62207"
    height="885.82678"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
-   sodipodi:docname="fdheat2.svg">
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="fdheat2.svg"
+   inkscape:export-filename="/home/milos/Desktop/PMF/pinn-skripta/toplota/fdheat2.png"
+   inkscape:export-xdpi="600"
+   inkscape:export-ydpi="600"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs4">
     <pattern
@@ -110,8 +113,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4142136"
-     inkscape:cx="242.22479"
-     inkscape:cy="681.45941"
+     inkscape:cx="242.18407"
+     inkscape:cy="172.53405"
      inkscape:document-units="cm"
      inkscape:current-layer="g6281"
      showgrid="true"
@@ -119,11 +122,12 @@
      fit-margin-left="2"
      fit-margin-right="2"
      inkscape:showpageshadow="false"
-     inkscape:window-width="1857"
+     inkscape:window-width="1920"
      inkscape:window-height="1016"
-     inkscape:window-x="63"
-     inkscape:window-y="27"
-     inkscape:window-maximized="1">
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:pagecheckerboard="0">
     <inkscape:grid
        type="xygrid"
        id="grid2985"
@@ -131,9 +135,11 @@
        visible="true"
        enabled="true"
        snapvisiblegridlinesonly="true"
-       spacingx="0.02cm"
-       spacingy="0.02cm"
-       units="cm" />
+       spacingx="0.70866142"
+       spacingy="0.70866142"
+       units="cm"
+       originx="0"
+       originy="0" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -672,180 +678,172 @@
          sodipodi:nodetypes="cc" />
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;line-height:125%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
          x="125"
          y="45.326782"
          id="text6665"
-         sodipodi:linespacing="125%"
          transform="matrix(0.70792741,0,0,1,212.85957,0)"><tspan
            sodipodi:role="line"
            id="tspan6667"
            x="125"
-           y="45.326782">Т</tspan></text>
+           y="45.326782"
+           style="font-size:14px;line-height:1.25">Т</tspan></text>
       <text
          xml:space="preserve"
-         style="font-size:14.00000004px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
          x="148"
          y="392.82678"
          id="text6669"
-         sodipodi:linespacing="125%"
          transform="matrix(0.70792741,0,0,1,212.85957,0)"><tspan
            sodipodi:role="line"
            id="tspan6671"
            x="148"
-           y="392.82678">0</tspan></text>
+           y="392.82678"
+           style="font-size:14px;line-height:1.25">0</tspan></text>
       <text
          xml:space="preserve"
-         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
          x="494.26764"
          y="391.91269"
          id="text6677"
-         sodipodi:linespacing="125%"
          transform="matrix(0.70792741,0,0,1,212.85957,0)"><tspan
            sodipodi:role="line"
            id="tspan6679"
            x="494.26764"
-           y="391.91269"> l</tspan></text>
+           y="391.91269"
+           style="font-size:14px;line-height:1.25"> l</tspan></text>
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.77937889px;line-height:125%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none"
          x="528.07196"
          y="343.1355"
          id="text6681"
-         sodipodi:linespacing="125%"
          transform="scale(0.84138419,1.1885177)"><tspan
            sodipodi:role="line"
            id="tspan6683"
            x="528.07196"
            y="343.1355"
-           style="fill:#000000">n=100sin(PI*x)</tspan></text>
+           style="font-size:11.7794px;line-height:1.25;fill:#000000">u=sin(PI*x)</tspan></text>
       <text
          xml:space="preserve"
-         style="font-size:11.77937889px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
          x="-172.91441"
          y="348.3884"
          id="text6700"
-         sodipodi:linespacing="125%"
          transform="matrix(0,-1.1885176,0.84138425,0,0,0)"><tspan
            sodipodi:role="line"
            id="tspan6702"
            x="-172.91441"
-           y="348.3884">Време</tspan></text>
+           y="348.3884"
+           style="font-size:11.7794px;line-height:1.25">Време</tspan></text>
       <text
          xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:33.6553688px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          x="491.48996"
          y="65.588226"
          id="text4260"
-         sodipodi:linespacing="125%"
          transform="scale(0.84138422,1.1885177)"><tspan
            sodipodi:role="line"
            id="tspan4262"
            x="491.48996"
            y="65.588226"
-           style="font-size:11.77937892px">h</tspan></text>
+           style="font-size:11.7794px;line-height:1.25">h</tspan></text>
       <text
          xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:33.6553688px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          x="436.91263"
          y="107.32619"
          id="text4264"
-         sodipodi:linespacing="125%"
          transform="scale(0.84138419,1.1885177)"><tspan
            sodipodi:role="line"
            id="tspan4266"
            x="436.91263"
            y="107.32619"
-           style="font-size:11.77937889px">k</tspan></text>
+           style="font-size:11.7794px;line-height:1.25">k</tspan></text>
       <text
          xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:33.6553688px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          x="534.16534"
          y="191.8853"
          id="text4264-3"
-         sodipodi:linespacing="125%"
          transform="scale(0.84138425,1.1885176)"><tspan
            sodipodi:role="line"
            id="tspan4266-6"
            x="534.16534"
            y="191.8853"
-           style="font-size:11.77937921px">u[i,j+1]</tspan></text>
+           style="font-size:11.7794px;line-height:1.25">u[i,j+1]</tspan></text>
       <text
          xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:33.6553688px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          x="466.63217"
          y="247.38713"
          id="text4264-3-7"
-         sodipodi:linespacing="125%"
          transform="scale(0.84138425,1.1885176)"><tspan
            sodipodi:role="line"
            id="tspan4266-6-5"
            x="466.63217"
            y="247.38713"
-           style="font-size:11.77937889px">u[i-1,j]</tspan></text>
+           style="font-size:11.7794px;line-height:1.25">u[i-1,j]</tspan></text>
       <text
          xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:33.6553688px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          x="602.2804"
          y="247.38713"
          id="text4264-3-3"
-         sodipodi:linespacing="125%"
          transform="scale(0.84138425,1.1885176)"><tspan
            sodipodi:role="line"
            id="tspan4266-6-56"
            x="602.2804"
            y="247.38713"
-           style="font-size:11.77937889px">u[i+1,j]</tspan></text>
+           style="font-size:11.7794px;line-height:1.25">u[i+1,j]</tspan></text>
       <text
          xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:33.6553688px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          x="534.17847"
          y="247.38713"
          id="text4264-3-2"
-         sodipodi:linespacing="125%"
          transform="scale(0.84138425,1.1885176)"><tspan
            sodipodi:role="line"
            id="tspan4266-6-9"
            x="534.17847"
            y="247.38713"
-           style="font-size:11.77937889px">u[i,j]</tspan></text>
+           style="font-size:11.7794px;line-height:1.25">u[i,j]</tspan></text>
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.77937889px;line-height:125%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none"
          x="527.30353"
          y="358.28046"
          id="text6681-3"
-         sodipodi:linespacing="125%"
          transform="scale(0.84138425,1.1885176)"><tspan
            sodipodi:role="line"
            id="tspan6683-6"
            x="527.30353"
            y="358.28046"
-           style="fill:#000000">Простор</tspan></text>
+           style="font-size:11.7794px;line-height:1.25;fill:#000000">Простор</tspan></text>
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.77937889px;line-height:125%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
          x="-172.41757"
          y="690.86224"
          id="text6700-7"
-         sodipodi:linespacing="125%"
          transform="matrix(0,-1.1885176,0.84138425,0,0,0)"><tspan
            sodipodi:role="line"
            id="tspan6702-5"
            x="-172.41757"
-           y="690.86224">u=0</tspan></text>
+           y="690.86224"
+           style="font-size:11.7794px;line-height:1.25">u=0</tspan></text>
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.77937889px;line-height:125%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
          x="-172.41757"
          y="371.79437"
          id="text6700-7-3"
-         sodipodi:linespacing="125%"
          transform="matrix(0,-1.1885176,0.84138425,0,0,0)"><tspan
            sodipodi:role="line"
            id="tspan6702-5-5"
            x="-172.41757"
-           y="371.79437">u=0</tspan></text>
+           y="371.79437"
+           style="font-size:11.7794px;line-height:1.25">u=0</tspan></text>
     </g>
   </g>
 </svg>
