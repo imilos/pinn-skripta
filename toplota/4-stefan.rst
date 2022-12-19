@@ -59,3 +59,109 @@
     s(t)  = \alpha t. 
 
 Решавање овог проблема ФЗНН приступом подразумева конструкцију две неуронске мреже. Прва ће апроксимирати дистрибуцију температура :math:`u(x,\ t)` док ће друга апроксимирати положај слободне границе између фаза :math:`s(t)`. Апроксимативна решења биће аутоматски диференцирана у односу на улазне варијабле од којих зависе, за вредности дефинисане скупом колокационих тачака из домена :math:`\lbrack 0,T\rbrack \times \mathcal{D}`, где је :math:`\mathcal{D \subset}\mathbb{R}^{d}` ограничени домен, а :math:`T` означава конално време симулације. Функција губитка састоји се из компоненти изведених из :math:numref:`eq:stefan-jednacina`, :math:numref:`eq:stefan-granicni` и :math:numref:`eq:stefan-granicni1`, користећи апрокцимације за :math:`u` и :math:`s` у колокационим тачкама, које покривају како унутрашњост домена, тако и домене у којима важе почетни и гранични услови.
+
+Конструкција функције губитка
+--------------------------------
+
+Као што је већ речено, прва мрежа апроксимира функцију температуре :math:`u(x,t)`, а друга мрежа апроксимира положај слободне границе између фаза :math:`s(t)`. Функција губитка састоји се из разлике :math:`u` и :math:`s` и њихових апроксимација :math:`\widehat{u}` и :math:`\widehat{s}` које даје ФЗНН и који представљају
+резидууме које даје главна диференцијална једначина, почетни и гранични услови. Дакле, укупан губитак :math:`\mathcal{L}` одређен је сумом резидуума:
+
+.. math::
+    :label: eq:stefan-loss1
+
+    \mathcal{L} = \mathcal{L}_r + \mathcal{L}_0 + \mathcal{L}_{b_{1}} + \mathcal{L}_{b_{2}} + \mathcal{L}_{b_{3}},
+
+где су:
+
+.. math::
+    :label: eq:stefan-loss2
+
+    \mathcal{L}_r = \frac{1}{N_r}\sum_{i = 1}^{N_r}{\left| \frac{\partial\widehat{u}(x,t)}{\partial t} - \alpha\frac{\partial^{2}\widehat{u}(x,t)}{\partial x^2} \right|^2}, \\
+    \mathcal{L}_0 = \frac{1}{N_{0}}\sum_{i = 1}^{N_0}{\left| \widehat{s}(0) - s(0) \right|^2},  \\
+    \mathcal{L}_{b_1} = \frac{1}{N_{b_1}}\sum_{i = 1}^{N_{b_1}}\left| \frac{1}{a}\frac{\partial\widehat{s}(t)}{\partial t} + \frac{\partial\widehat{u}}{\partial\widehat{s}(t)} \right|^2, \\
+    \mathcal{L}_{b_2} = \frac{1}{N_{b_2}}\sum_{i = 1}^{N_{b_2}}\left| \widehat{u}(0,t) - u(0,t) \right|^{2},  \\
+    \mathcal{L}_{b_3} = \frac{1}{N_{b_3}}\sum_{i = 1}^{N_{b_3}}\left| \widehat{u}\left( \widehat{s}(t),t \right) - u\left( s(t),t \right) \right|^2.
+
+Први члан :math:`\mathcal{L}_r`` пенализује по главној диференцијалној једначини :math:numref:`eq:stefan-jednacina`, где је :math:`N_r` величина *batch*-a колокационих талака које се случајно узоркују из домена простор-временских координата које узимају вредности :math:`0 \leq x \leq 1` и :math:`0s \leq t \leq 0,5s`, респективно. :math:`\widehat{u}(x,t)` је апроксимативна неуронска мрежа температурског поља :math:`u(x,t)`. Други члан :math:`\mathcal{L}_0` одређује испуњеност граничног услова :math:numref:`eq:stefan-granicni1`. Испуњеност Стефановог граничног услова :math:numref:`eq:stefancond` дат је резидуумом :math:`\mathcal{L}_{b_1}`, где :math:`\widehat{s}(t)` означава ФЗНН апроксимацију положаја покретне границе. Последња два члана :math:`\mathcal{L}_{b_2}` и :math:`\mathcal{L}_{b_3}` одређују резуидуале граничних услова :math:numref:`eq:stefan-granicni`, где :math:`N_0, \, N_{b_1}, \, N_{b_2}`,  и :math:`N_{b_3}` означавају број колокационих тачака у којима важе почетни и гранични услови.
+
+Имплементација
+--------------------------------
+
+Комптлетно решење које користи функционалност већ познате библиотеке SCIANN дато је у следећем листингу:
+
+.. code-block:: python
+    :caption: Решење Стефановог проблема у 1Д коришћењем SCIANN библиотеке
+    :linenos:
+
+    import numpy as np
+    import matplotlib.pyplot as plt 
+    import sciann as sn
+    from numpy import pi
+    from sciann.utils.math import diff, sign, sin, sqrt, exp
+    import random
+
+    alpha = 1.0
+
+    # Почетни услови
+    t0 = 0.1
+    s0 = alpha * t0
+
+
+    # Дефинисање варијабли и функционала
+    x = sn.Variable('x')
+    t = sn.Variable('t')
+    u = sn.Functional (["u"], [x, t], 8*[30] , 'tanh')
+    s = sn.Functional (["s"], [t], 8*[30] , 'tanh')
+
+    # Диференцијална једначина
+    L1 =  diff(u, t) - alpha * diff(u, x, order=2)
+
+    TOLX=0.004
+    TOLT=0.002
+
+    # Стефанов услов
+    C1 = (1/alpha*diff(s, t) + diff(u,x)) * (1 + sign(x - (s-TOLX))) * (1-sign(x-s))
+
+    # Pocetno s u trenutku t=t0
+    C2 = (1-sign(t - (t0+TOLT))) * ( s - s0 )
+    # Granicni uslov za u kada je x=0
+    C3 = (1-sign(x - (0 +TOLX))) *  ( u - exp(alpha*t) )
+
+    # Temperatura na granici izmedju faza je 1
+    C4 = (1-sign(x - (s+TOLX))) * (1+sign(x-s)) * (u-1)
+
+    x_data, t_data = [], []
+
+    # Тренинг скуп колокационих тачака
+    x_train, t_train = np.meshgrid(
+        np.linspace(0, 1, 300),
+        np.linspace(t0, 0.5, 300)
+    )
+
+    x_data, t_data = np.array(x_train), np.array(t_train)
+
+    m = sn.SciModel([x, t], [L1,C1,C2,C3,C4], 'mse', 'Adam')
+    h = m.train([x_data, t_data], 5*['zero'], learning_rate=0.002, batch_size=1024, epochs=1000, adaptive_weights={'method':'NTK', 'freq':20})
+
+    # Тест скуп
+    x_test, t_test = np.meshgrid(
+        np.linspace(0, 1, 300), 
+        np.linspace(0.01, 0.5, 300)
+    )
+    u_pred = u.eval(m, [x_test, t_test])
+    s_pred = s.eval(m, [x_test, t_test])
+
+    s=[]
+    for e in s_pred:
+        s.append(e[0])
+
+    # Кретање покретне границе између фаза
+    fig = plt.figure()
+    plt.plot(t_test[:,0], s)
+    plt.savefig('stefan.png')
+
+    # Поље температура у крајњем временском тренутју t=0.5
+    fig = plt.figure()
+    plt.plot(x_test[299], u_pred[299])
+    plt.savefig('u_field.png')
+
