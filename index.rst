@@ -14,6 +14,7 @@
 
 .. toctree::
    :maxdepth: 2
+   :numbered:
    :caption: Садржај
 
    predgovor/predgovor.rst
