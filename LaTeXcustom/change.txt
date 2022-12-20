@@ -4,9 +4,3 @@
 \chapter*{Предговор}
 \addcontentsline{toc}{chapter}{Предговор}
 \markboth{Предговор}{Предговор}
-
-
-
-\chapter*{Литература}
-\addcontentsline{toc}{chapter}{Литература}
-\markboth{Литература}{Литература}
