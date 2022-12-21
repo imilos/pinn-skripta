@@ -20,6 +20,7 @@
    predgovor/predgovor.rst
    uvod/index.rst
    toplota/index.rst
+   oscilacije/index.rst
    literatura/literatura.rst
 
 .. Indices and tables
