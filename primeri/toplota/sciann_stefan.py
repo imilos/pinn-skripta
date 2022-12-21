@@ -43,7 +43,7 @@ x_train, t_train = np.meshgrid(
 x_data, t_data = np.array(x_train), np.array(t_train)
 
 m = sn.SciModel([x, t], [L1,C1,C2,C3,C4], 'mse', 'Adam')
-h = m.train([x_data, t_data], 5*['zero'], learning_rate=0.002, batch_size=1024, epochs=20, adaptive_weights={'method':'NTK', 'freq':20})
+h = m.train([x_data, t_data], 5*['zero'], learning_rate=0.002, batch_size=1024, epochs=200, adaptive_weights={'method':'NTK', 'freq':20})
 
 # Test
 x_test, t_test = np.meshgrid(
@@ -63,14 +63,18 @@ plt.plot(t1, s, 'o--', label='s (PINN)')
 plt.plot(t1, alpha * t1, '-', label='s (Egzaktno)')
 plt.xlabel("t")
 plt.ylabel("s")
+plt.legend()
 plt.title("Položaj granice između faza")
 plt.show()
 
 fig = plt.figure()
 plt.plot(x_test[29], u_pred[29], 'o--', label='u (PINN)')
 x1 = x_test[29]
-plt.plot(x1, np.exp(alpha*0.5)-x1, '-', label='u (Egzaktno)')
+plt.plot(x1, np.exp(alpha*0.5-x1), '-', label='u (Egzaktno)')
 plt.xlabel("x")
 plt.ylabel("u")
+plt.xlim(left=0, right=0.5)
+plt.ylim(bottom=1)
+plt.legend()
 plt.title("Polje temperature")
 plt.show()
