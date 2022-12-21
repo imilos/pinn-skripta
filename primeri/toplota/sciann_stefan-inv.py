@@ -70,14 +70,19 @@ plt.plot(t1, s, 'o--', label='s (PINN)')
 plt.plot(t1, alpha_real * t1, '-', label='s (Egzaktno)')
 plt.xlabel("t")
 plt.ylabel("s")
+plt.legend()
 plt.title("Položaj granice između faza")
 plt.show()
 
 fig = plt.figure()
-x1 = x_test[29]
 plt.plot(x_test[29], u_pred[29], 'o--', label='u (PINN)')
+x1 = x_test[29]
 plt.plot(x1, np.exp(alpha_real*0.5-x1), '-', label='u (Egzaktno)')
 plt.xlabel("x")
 plt.ylabel("u")
+plt.xlim(left=0, right=0.5)
+plt.ylim(bottom=1)
+plt.legend()
 plt.title("Polje temperature")
 plt.show()
+
