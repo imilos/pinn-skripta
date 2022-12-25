@@ -15,7 +15,7 @@ x0 = 0
 v0 = 2
 
 delta = mu / (2*m)
-w0 = np.sqrt(m / k)
+w0 = np.sqrt(k/m)
 
 # Egzaktno resenje
 def func(t):
