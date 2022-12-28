@@ -8,8 +8,8 @@ import matplotlib.pyplot as plt
 # k - spring const
 
 m = 1
-mu = 0.1
-k = 2
+mu = 3
+k = 2.25
 
 x0 = 0
 v0 = 2
@@ -57,7 +57,7 @@ net = dde.nn.FNN(layers, activation, init)
 model = dde.Model(data, net)
 
 model.compile("adam", lr=.001, loss_weights=[0.01, 1, 1], metrics=["l2 relative error"])
-losshistory, train_state = model.train(epochs=10000)
+losshistory, train_state = model.train(epochs=30000)
 
 #dde.saveplot(losshistory, train_state, issave=True, isplot=True)
 
@@ -66,6 +66,9 @@ x_pred = model.predict(T)
 np.savetxt("spring-10000.txt", x_pred)
 
 plt.figure()
+plt.title("Kritično-prigušeni slučaj")
 plt.plot(T, x_pred, "o--")
+plt.xlabel("t[s]")
+plt.ylabel("x[m]")
 plt.show()
 
