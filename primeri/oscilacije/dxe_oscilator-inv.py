@@ -8,10 +8,11 @@ import matplotlib.pyplot as plt
 # mu -friction coef
 # k - spring const
 
-m = 1
+#m = 1
+m = dde.Variable(0.5)
 mu = 0.6
 #k = 2.25
-k = dde.Variable(3.)
+k = dde.Variable(2.)
 
 x0 = 2
 v0 = 0
@@ -48,14 +49,14 @@ interval = dde.geometry.TimeDomain(0, 10)
 ic1 = dde.icbc.OperatorBC(interval, bc_func1, boundary_l)
 ic2 = dde.icbc.OperatorBC(interval, bc_func2, boundary_l)
 
-bc_x = np.array([1.18, 3.27, 5.37, 7.46, 9.55]).reshape(5,1)
-bc_y = np.array([0, 0, 0, 0, 0 ]).reshape(5,1)
+bc_x = np.array([1.18, 3.27, 5.37, 7.46, 9.55, 2.12]).reshape(6,1)
+bc_y = np.array([0, 0, 0, 0, 0, -1.067 ]).reshape(6,1)
 ic3 = dde.icbc.PointSetBC(bc_x, bc_y, component=0)
 
 # Definsanje problema, granicnih uslova, broja kolokacionih tacaka
-data = dde.data.TimePDE(interval, Ode, [ic1, ic2, ic3], 100, 20, solution=func, num_test=100)
+data = dde.data.TimePDE(interval, Ode, [ic1, ic2, ic3], 200, 20, solution=func, num_test=100)
     
-layers = [1] + [30] * 2 + [1]
+layers = [1] + [30] * 3 + [1]
 activation = "tanh"
 init = "Glorot uniform"
 net = dde.nn.FNN(layers, activation, init)
@@ -63,10 +64,11 @@ net = dde.nn.FNN(layers, activation, init)
 model = dde.Model(data, net)
 
 # Callback funkcija koja stampa varijablu na svakih 1000 epoha
-variable = dde.callbacks.VariableValue(k, period=1000)
+variable1 = dde.callbacks.VariableValue(k, period=1000)
+variable2 = dde.callbacks.VariableValue(m, period=1000)
 
-model.compile("adam", lr=.001, loss_weights=[0.01, 1, 1, 1], metrics=["l2 relative error"], external_trainable_variables=[k])
-losshistory, train_state = model.train(epochs=50000, callbacks=[variable])
+model.compile("adam", lr=.001, loss_weights=[0.01, 1, 1, 1], metrics=["l2 relative error"], external_trainable_variables=[k,m])
+losshistory, train_state = model.train(epochs=50000, callbacks=[variable1, variable2])
 
 #dde.saveplot(losshistory, train_state, issave=True, isplot=True)
 
