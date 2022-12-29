@@ -51,6 +51,9 @@ ic2 = dde.icbc.OperatorBC(interval, bc_func2, boundary_l)
 
 bc_x = np.array([1.18, 3.27, 5.37, 7.46, 9.55, 2.12]).reshape(6,1)
 bc_y = np.array([0, 0, 0, 0, 0, -1.067 ]).reshape(6,1)
+#bc_x = np.array([1.18, 3.27, 5.37, 7.46, 9.55]).reshape(5,1)
+#bc_y = np.array([0, 0, 0, 0, 0 ]).reshape(5,1)
+
 ic3 = dde.icbc.PointSetBC(bc_x, bc_y, component=0)
 
 # Definsanje problema, granicnih uslova, broja kolokacionih tacaka
