@@ -21,6 +21,7 @@
    uvod/index.rst
    toplota/index.rst
    oscilacije/index.rst
+   hidrologija/index.rst
    literatura/literatura.rst
 
 .. Indices and tables
