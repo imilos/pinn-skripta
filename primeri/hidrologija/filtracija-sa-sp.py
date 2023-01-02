@@ -71,12 +71,12 @@ FS1 = (abs(y-phi)<0.009) * k * (diff(phi,x)*nx + diff(phi,y)*ny)
 
 # %%
 # FZNN model
-m2 = sn.SciModel([x,y], [fun1, C1, C2, N1, N2],  optimizer='Adam')
+m2 = sn.SciModel([x,y], [fun1, C1, C2, N1, N2, FS1],  optimizer='Adam')
 
 # %%
 
 # Trening
-pinn_model = m2.train([x_data, y_data], 5*['zero'], learning_rate=0.001, batch_size=1024, epochs=100, stop_loss_value=1E-15)
+pinn_model = m2.train([x_data, y_data], 6*['zero'], learning_rate=0.001, batch_size=1024, epochs=100, stop_loss_value=1E-15)
 
 # %%
 # Test set (x,y)
@@ -111,7 +111,7 @@ for i in range(phi_pred.shape[0]):
                  phi_graph.append(phi_pred[i][j])                 
 
 # %%
-# Poredjenje SP sa analiticnik resenjem
+# Poredjenje SP sa analitickim resenjem
 plt.clf()
 plt.plot(x_graph, phi_graph, 'o--', label = "Slobodna površina PINN")
 x_axes = np.linspace(0,2,100)
@@ -120,7 +120,6 @@ plt.xlabel("x [m]")
 plt.ylabel("$\Phi$ [m]")
 plt.title("Slobodna površina")
 plt.legend()
-plt.savefig("results_free_surface_phi.png")
 plt.show()
 
 
@@ -132,16 +131,13 @@ x_test, y_test = np.meshgrid(
 )
 phi_pred = phi_pred.reshape(101,-1)
 fig, ax = plt.subplots()
-plt.plot(x_graph, phi_graph, 'red', label = "Slobodna površina")
 plt.xlabel('x [m]')
 plt.ylabel('y [m]')
 plt.title("Potencijal")
 CS = plt.contour(x_test,y_test,phi_pred)
 CS = plt.contourf(x_test,y_test,phi_pred)
 cbar = fig.colorbar(CS)
-plt.legend()
 cbar.update_ticks()
-plt.savefig("results_potential.png")
 plt.show()
 
 
