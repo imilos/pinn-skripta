@@ -22,6 +22,7 @@
    toplota/index.rst
    oscilacije/index.rst
    hidrologija/index.rst
+   akustika/index.rst
    literatura/literatura.rst
 
 .. Indices and tables
