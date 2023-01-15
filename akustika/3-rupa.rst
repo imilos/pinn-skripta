@@ -10,7 +10,14 @@
 .. math::
     -\frac{\partial^2 u}{\partial x^2} - \frac{\partial^2 u}{\partial y^2} - k_0^2 u = f, \quad \text{на } \Omega
 
-где је члан који специфицира извор :math:`f(x,y)=k_0^2 \sin(k_0x) \sin(k_0 y)`. 
+где је члан који специфицира извор :math:`f(x,y)=k_0^2 \sin(k_0x) \sin(k_0 y)`. Облик домена може се видети на :numref:`akustika-rupa`.
+
+.. _akustika-rupa:
+
+.. figure:: akustika2.png
+    :width: 60%
+
+    Поставка проблема и гранични услови.
 
 Постоји егзактно решење овог проблема и оно гласи:
 
