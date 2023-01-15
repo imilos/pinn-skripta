@@ -9,3 +9,5 @@
 
    1-uvod.rst
    2-ravan.rst
+   3-rupa.rst
+   
