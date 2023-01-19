@@ -72,11 +72,80 @@
     w=0 \quad \\
     x \in \Gamma_1.
 
-Дакле, прве две једначине важе у целом домену :math:`\Omega`, друге две на граници :math:`\Gamma_2` и последље две на :math:`\Gamma_1`. Овде први пут имамо систем диференцијалних једначина, али ни то не би требало да буде велики проблем за ФЗНН методу, ако подразумевамо да је систем затворен и једнозначан. Пре
+Дакле, прве две једначине важе у целом домену :math:`\Omega`, друге две на граници :math:`\Gamma_2`, а последље две на :math:`\Gamma_1`. Овде први пут имамо систем диференцијалних једначина, али ни то не би требало да буде проблем за ФЗНН методу, ако подразумевамо да је систем затворен, тј. једнозначан. 
 
 
 Имплементација
 -----------------
 
 На основу система једначина :math:numref:`eq:sistem1` треба да формирамо композитну функцију губитка, да формирамо ФЗНМ мрежу и да је истренирамо на довољном броју колокационих тачака. Ево кључних делова имплементације остварене помоћу оквира SCIANN:
+
+.. code-block:: python
+    :caption: Решење проблема простирања таласа у 2Д домену са сочивом
+    :linenos:
+
+    import numpy as np
+    import matplotlib.pyplot as plt 
+    import sciann as sn
+    from numpy import pi
+    from sciann.utils.math import diff, sign, sin, sqrt
+
+    # Brzina talasa
+    c = 1
+    # Frekvencija
+    omega = 2*pi*4
+
+    x = sn.Variable('x')
+    y = sn.Variable('y')
+    v, w = sn.Functional (["v", "w"], [x, y], 3*[200] , 'sin')
+
+    # Diferencijalne jednacine za v i w
+    L1 = -omega**2 * v - c**2 * diff(v, x, order=2) - c**2 * diff(v, y, order=2) 
+    L2 = -omega**2 * w - c**2 * diff(w, x, order=2) - c**2 * diff(w, y, order=2)
+
+    TOL = 0.015
+
+    # Dirihleov uslov na G1 (y=0 i 0.4<x<0.6)
+    a,b,c,d =  0.39762422, -1.57715550, -0.03696364,  1.60337246
+    C1 = (1 - sign(y - (a + b*x + c*sqrt(x) + d*x**2 + TOL))) * (1 + sign(x-0.4)) * (1 - sign(x-0.6)) * (1-v) 
+    C2 = (1 - sign(y - (a + b*x + c*sqrt(x) + d*x**2 + TOL))) * (1 + sign(x-0.4)) * (1 - sign(x-0.6)) * (w-0)
+
+    # Gornja granica G2 (gde je y=1)
+    C3 =  (1+sign(y - (1-TOL))) * ( c*diff(v,y) - omega*w )
+    C4 =  (1+sign(y - (1-TOL))) * ( c*diff(w,y) + omega*v )
+
+    # Desna granica G2 (gde je x=1)
+    C5 =  (1+sign(x - (1-TOL))) * ( c*diff(v,x) - omega*w )
+    C6 =  (1+sign(x - (1-TOL))) * ( c*diff(w,x) + omega*v )
+
+    # Leva granica G2 (gde je x=0)
+    C7 =  (1-sign(x - (0+TOL))) * ( -c*diff(v,x) - omega*w )
+    C8 =  (1-sign(x - (0+TOL))) * ( -c*diff(w,x) + omega*v )
+
+    # Donja granica G2 (gde je y=0) i (x<0.4 or x>0.6)
+    C9 =   (1-sign(y - (0+TOL))) * ( (1 - sign(x-0.4)) + (1 + sign(x-0.6)) ) * ( -c*diff(v,y) - omega*w )
+    C10 =  (1-sign(y - (0+TOL))) * ( (1 - sign(x-0.4)) + (1 + sign(x-0.6)) ) * ( -c*diff(w,y) + omega*v )
+
+    x_data, y_data = [], []
+
+    kolokacione_tacke = np.genfromtxt('kolokacione_tacke.txt', delimiter=" ")
+
+    for e in kolokacione_tacke:
+        ind, x1, y1 = e
+        x_data.append(x1)
+        y_data.append(y1)
+
+    x_data, y_data = np.array(x_data), np.array(y_data)
+
+    # Model i obucavanje
+    m = sn.SciModel([x, y], [L1,L2,C1,C2,C3,C4,C5,C6,C7,C8,C9,C10], 'mse', 'Adam')
+    h = m.train([x_data, y_data], 12*['zero'], learning_rate=0.001, batch_size=1024, epochs=8000, adaptive_weights={'method':'NTK', 'freq':200})
+
+    # Test
+    x_test, y_test = np.meshgrid(
+        np.linspace(0, 1, 200), 
+        np.linspace(0, 1, 200)
+    )
+    v_pred = v.eval(m, [x_test, y_test])
+    w_pred = w.eval(m, [x_test, y_test])
 
