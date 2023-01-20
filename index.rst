@@ -23,6 +23,7 @@
    oscilacije/index.rst
    hidrologija/index.rst
    akustika/index.rst
+   misici/index.rst
    literatura/literatura.rst
 
 .. Indices and tables
