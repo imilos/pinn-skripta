@@ -8,7 +8,7 @@
 Да се подсетимо, домен проблема :math:`\Omega` је квадрат странице :math:`L, \, L=1`, из кога исккључујемо круг полупречника :math:`R=\frac{1}{4}`. За таласни број :math:`k_0=2 \pi n` и :math:`n=1`, решавамо Хелмхолцову једначину:
 
 .. math::
-    -\frac{\partial^2 u}{\partial x^2} - \frac{\partial^2 u}{\partial y^2} - k_0^2 u = f, \quad \text{на } \Omega
+    -\frac{\partial^2 u}{\partial x^2} - \frac{\partial^2 u}{\partial y^2} - k_0^2 u = f, \quad \mid \Omega
 
 где је члан који специфицира извор :math:`f(x,y)=k_0^2 \sin(k_0x) \sin(k_0 y)`. Облик домена може се видети на :numref:`akustika-rupa`.
 

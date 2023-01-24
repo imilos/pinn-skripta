@@ -154,9 +154,13 @@ latex_additional_files = [CCBYSAlogo]
 latex_engine = 'xelatex'
 latex_elements = {
     'fontpkg': r'''
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
+%\setmainfont{DejaVu Serif}
+%\setsansfont{DejaVu Sans}
+%\setmonofont{DejaVu Sans Mono}
+\setmainfont{Liberation Serif}
+\setsansfont{Liberation Sans}
+\setmonofont{Liberation Mono}
+
 \usepackage[left=2cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
 ''',
     'preamble': r'''

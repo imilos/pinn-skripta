@@ -71,18 +71,18 @@
 
 #. **задат потенцијал**
     .. math::
-        \phi = \bar{\phi}, \qquad \text{на } \Gamma_1
+        \phi = \bar{\phi}, \qquad \mid \Gamma_1
 
 #. **задат површински проток (флукс)**
     .. math::
-        q_n = \bar{q} \qquad \text{на } \Gamma_2
+        q_n = \bar{q} \qquad \mid \Gamma_2
 	
 #. **слободна површина**
 
     .. math::
         :label: eq:uslov-sp
 
-        p=0, \, \phi=y, \, \frac{\partial \phi}{\partial n}=0 \qquad \text{на }  \Gamma_3
+        p=0, \, \phi=y, \, \frac{\partial \phi}{\partial n}=0 \qquad \mid  \Gamma_3
 
 Приметимо да је на слободној површини :math:`\phi=y`. Пошто се облик слободне површине не зна, то је њено одређивање посебан задатак у овој области. И овај проблем ћемо покушати да покријемо ФЗНМ методом. 
 

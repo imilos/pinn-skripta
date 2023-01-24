@@ -6,7 +6,7 @@
 Кренућемо од најједноставнијег дводимензионог случаја стојећег таласа у акустици. За таласни број :math:`k_0=2 \pi n` за :math:`n=2`, треба решити Хелмхолцову (*Helmholtz*) једначину облика:
 
 .. math:: 
-    -\frac{\partial^2 u}{\partial x^2} - \frac{\partial^2 u}{\partial y^2} - k_0^2 u = f, \quad \text{на } \Omega=[0,1]^2
+    -\frac{\partial^2 u}{\partial x^2} - \frac{\partial^2 u}{\partial y^2} - k_0^2 u = f, \quad \mid \Omega=[0,1]^2
 
 уз Дирихлеове граничне услове 
 
