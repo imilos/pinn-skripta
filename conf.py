@@ -148,7 +148,8 @@ htmlhelp_basename = 'PINN'
 
 # -- Options for LaTeX output ------------------------------------------------
 
-CCBYSAlogo = './LaTeXcustom/by-sa.eps'
+#CCBYSAlogo = './LaTeXcustom/by-sa.eps'
+CCBYSAlogo = 'by-sa.svg'
 
 latex_additional_files = [CCBYSAlogo]
 latex_engine = 'xelatex'

@@ -34,7 +34,7 @@
 .. * :ref:`modindex`
 .. * :ref:`search`
 
-.. image:: https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-sa.svg
+.. image:: by-sa.svg
     :align: center
 
 Нека права задржана. Ово дело обjављено jе под условима Creative-Commons Ауторство-делити под истим условима 4.0 међународне лиценце (енг. `Creative Commons Attribution-ShareAlike 4.0 International License <http://creativecommons.org/licenses/by-sa/4.0>`_).
