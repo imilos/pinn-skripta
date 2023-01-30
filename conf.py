@@ -19,7 +19,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Физички засноване неуронске мреже'
+project = 'Физички поткрепљене неуронске мреже'
 copyright = '2022-2023, Милош Ивановић'
 author = 'Милош Ивановић'
 
@@ -160,7 +160,7 @@ latex_elements = {
 %\setmonofont{DejaVu Sans Mono}
 \setmainfont{Liberation Serif}
 \setsansfont{Liberation Sans}
-\setmonofont{Liberation Mono}
+\setmonofont{FreeMono}
 
 \usepackage[left=2cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
 ''',
@@ -198,13 +198,13 @@ latex_use_modindex = True
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-latex_documents = [(master_doc, 'pinn-skripta.tex', 'Физички засноване неуронске мреже', 'Милош Ивановић', 'manual', True)]
+latex_documents = [(master_doc, 'pinn-skripta.tex', 'Физички поткрепљене неуронске мреже', 'Милош Ивановић', 'manual', True)]
 
 # -- Options for manual page output ------------------------------------------
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [(master_doc, 'PINN', 'Физички засноване неуронске мреже', [author], 1)]
+man_pages = [(master_doc, 'PINN', 'Физички поткрепљене неуронске мреже', [author], 1)]
 
 # -- Options for Texinfo output ----------------------------------------------
 
@@ -212,7 +212,7 @@ man_pages = [(master_doc, 'PINN', 'Физички засноване неуро�
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'PINN', 'Физички засноване неуронске мреже', author,
+    (master_doc, 'PINN', 'Физички поткрепљене неуронске мреже', author,
      'PINN', 'One line description of project.', 'Miscellaneous'),
 ]
 
