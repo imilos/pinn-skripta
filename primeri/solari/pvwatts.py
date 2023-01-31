@@ -61,6 +61,7 @@ eta_inv_nom = 0.96
 eta_inv_ref = 0.9637
 pac0_inv = eta_inv_nom * pdc0_inv # maximum inverter capacity
 a = -2.98 # cell temperature parameter
+b = -0.0471 # Wind coefficient
 E0 = 1000 # reference irradiance
 deltaT = 1 # cell temperature parameter
 num_of_panels = 146 # Broj panela u instalaciji
@@ -75,7 +76,7 @@ def pvwatts_eq(x, y):
     Ta = x[:,0:1] # Temperatura vazduha
     E = x[:,1:2] # Ukupna POA osuncanost
     
-    Tm = E * tf.exp(a_var) + Ta # Nemamo brzinu vetra
+    Tm = E * tf.exp(a_var+b*2) + Ta  # Brzina vetra od 2m/s uzeta ako prosek
     Tc = Tm + E/E0*deltaT
     P_dc_temp = ((Tc-Tref) * gamma_pdc + 1)
     P_dc = (E * 1.e-03 * pdc0 * P_dc_temp) * num_of_panels
@@ -94,7 +95,7 @@ def orig_pvwatts_model(x):
     Ta = x[:,0:1] # Temperatura
     E = x[:,1:2] # Ukupna POA osuncanost
     
-    Tm = E * np.exp(a) + Ta # Nemamo brzinu vetra
+    Tm = E * np.exp(a+b*2) + Ta # Nemamo brzinu vetra
     Tc = Tm + E/E0*deltaT
     P_dc_temp = ((Tc-Tref) * gamma_pdc + 1.)
     P_dc = (E * 1.e-03 * pdc0 * P_dc_temp) * num_of_panels
