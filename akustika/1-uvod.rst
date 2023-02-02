@@ -1,4 +1,4 @@
-.. akustika_uvod
+.. _akustika_uvod:
 
 Увод
 =======
