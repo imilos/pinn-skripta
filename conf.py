@@ -175,7 +175,55 @@ latex_elements = {
     'printindex': r'\footnotesize\raggedright\printindex',
     'papersize' : 'b5paper',
     'pointsize':'10pt',
+
+
+
+    'maketitle': r'''
+     \newcommand\sphinxbackoftitlepage{
+
+        \clearpage
+        \thispagestyle{empty}
+
+        \begin{center}
+        
+        Милош Ивановић
+
+        \textbf{Физички поткрепљене неуронске мреже}
+
+        \vspace{2.5cm}
+
+        \textit{Рецензенти} \\
+        Проф. др Александар Пеулић \\
+        Проф. др Бобан Стојановић
+
+        \vspace{2.5cm}
+
+        \textit{Издавач} \\
+        Природно-математички факултет Крагујевац  \\
+        Радоја Домановића 12 \\
+        Крагујевац
+
+        \vspace{2.5cm}
+
+        \textit{Штампа} \\
+        Графички атеље Сквер, Крагујевац
+
+        \vspace{2.5cm}
+
+        \textit{Тираж} \\
+        100 примерака
+
+        \vspace{2.5cm}
+
+        ISBN 978-86-6009-042-5
+        \end{center}
+
+     }\sphinxmaketitle
+    ''',
+    'atendofbody': r'',
+
 }
+
 latex_show_urls = 'footnote'
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -213,9 +261,9 @@ man_pages = [(master_doc, 'PINN', 'Физички поткрепљене неу�
 #  dir menu entry, description, category)
 texinfo_documents = [
     (master_doc, 'PINN', 'Физички поткрепљене неуронске мреже', author,
-     'PINN', 'One line description of project.', 'Miscellaneous'),
+     'PINN', 'Практикум', 'Miscellaneous'),
 ]
 
 # Omoguci numref
 numfig = True
-numfig_format={'code-block': 'Листинг %s', }
+numfig_format={'code-block' : 'Листинг %s', 'figure':'Сл. %s' }

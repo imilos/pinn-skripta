@@ -6,7 +6,7 @@
 Физички поткрепљене неуронске мреже
 ##############################################
 
-Практикум из предмета Машинско учење 2 
+Практикум
 
 
 Физички поткрепљене неуронске мреже
@@ -14,7 +14,6 @@
 
 .. toctree::
    :maxdepth: 2
-   :numbered:
    :caption: Садржај
 
    predgovor/predgovor.rst
@@ -27,14 +26,7 @@
    solari/index.rst
    literatura/literatura.rst
 
-.. Indices and tables
-.. ==================
-.. 
-.. * :ref:`genindex`
-.. * :ref:`modindex`
-.. * :ref:`search`
-
 .. image:: by-sa.svg
     :align: center
 
-Нека права задржана. Ово дело обjављено jе под условима Creative-Commons Ауторство-делити под истим условима 4.0 међународне лиценце (енг. `Creative Commons Attribution-ShareAlike 4.0 International License <http://creativecommons.org/licenses/by-sa/4.0>`_).
+Нека права задржана. Ово дело обjављено jе под условима Creative-Commons. Ауторство-делити под истим условима међународне лиценце `Creative Commons Attribution-ShareAlike 4.0 International License <http://creativecommons.org/licenses/by-sa/4.0>`_.
