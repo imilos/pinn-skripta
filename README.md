@@ -6,9 +6,9 @@
 
 ## Издања
 
-* HTML издање практикума доступно је на: :link: https://imilos.github.io/pinn/
-* PDF издање практикума се може преузети са: :link: https://imilos.github.io/pinn/pinn-skripta.pdf
-* PDF издање практикума се може преузети са: :link: https://imilos.github.io/pinn/pinn-skripta.epub
+* HTML издање практикума доступно је на: :link: https://imi.pmf.kg.ac.rs/~milos/pinn/
+* PDF издање практикума се може преузети са: :link: https://imi.pmf.kg.ac.rs/~milos/pinn/pinn/pinn-skripta.pdf
+* PDF издање практикума се може преузети са: :link: https://imi.pmf.kg.ac.rs/~milos/pinn/pinn-skripta.epub
 
 ## Изворни код
 
