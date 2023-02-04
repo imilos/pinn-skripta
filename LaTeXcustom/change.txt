@@ -1,6 +1,0 @@
-
-\newcommand{\sphinxlogo}{\sphinxincludegraphics[width=158pt]{bookwheel.jpg}\par}
-
-\chapter*{Предговор}
-\addcontentsline{toc}{chapter}{Предговор}
-\markboth{Предговор}{Предговор}
