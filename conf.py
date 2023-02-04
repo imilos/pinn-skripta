@@ -19,7 +19,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Физички поткрепљене неуронске мреже'
+project = 'Физички поткрепљене неуронске мреже - Практикум'
 copyright = '2022-2023, Милош Ивановић'
 author = 'Милош Ивановић'
 
@@ -155,9 +155,6 @@ latex_additional_files = [CCBYSAlogo]
 latex_engine = 'xelatex'
 latex_elements = {
     'fontpkg': r'''
-%\setmainfont{DejaVu Serif}
-%\setsansfont{DejaVu Sans}
-%\setmonofont{DejaVu Sans Mono}
 \setmainfont{Liberation Serif}
 \setsansfont{Liberation Sans}
 \setmonofont{FreeMono}
@@ -188,13 +185,14 @@ latex_elements = {
         
         Милош Ивановић
 
-        \textbf{Физички поткрепљене неуронске мреже}
+        \textbf{Физички поткрепљене неуронске мреже} \\
+        \textbf{Практикум}
 
-        \vspace{2.5cm}
+        \vspace{2.0cm}
 
         \textit{Рецензенти} \\
-        Проф. др Александар Пеулић \\
-        Проф. др Бобан Стојановић
+        проф. др  \\
+        доц. др 
 
         \vspace{2.5cm}
 
@@ -215,12 +213,51 @@ latex_elements = {
 
         \vspace{2.5cm}
 
-        ISBN 978-86-6009-042-5
+        ISBN XXX-XX-XXXX-XXX-X
         \end{center}
 
      }\sphinxmaketitle
     ''',
-    'atendofbody': r'',
+    'atendofbody': r'''
+
+%\cleardoublepage
+%\thispagestyle{empty}
+
+%\begin{center}
+
+%\vspace{3cm}
+
+%\textit{Издавач} \\
+%Природно-математички факултет Крагујевац  \\
+%Радоја Домановића 12 \\
+%http://www.pmf.kg.ac.rs \\
+%Крагујевац
+
+%\vspace{10cm}
+%\noindent\rule{14cm}{0.5pt}\\
+
+%\begin{Verbatim}[fontsize=\scriptsize]
+%CIP - Каталогизација у публикацији - Народна библиотека Србије, Београд
+  
+%004.42.032.24(075.8)
+  
+%ИВАНОВИЋ, Милош, 1978-
+%   Физички поткрепљене неуронске мреже - Практикум / Милош Ивановић. 
+%- Крагујевац : Природно-математички факултет, 2023 (Крагујевац : Сквер). - 
+%108 стр. : илустр. ; 25 cm
+  
+%Тираж 300. - Библиографија: стр. 105-107.
+  
+%ISBN XXX-XX-XXXX-XXX-X
+  
+%a) Физички поткрепљене неуронске мреже
+%COBISS.SR-ID 226920204
+%\end{Verbatim}
+
+%\noindent\rule{14cm}{0.5pt}\\
+
+%\end{center}
+    ''',
 
 }
 
@@ -246,13 +283,13 @@ latex_use_modindex = True
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-latex_documents = [(master_doc, 'pinn-skripta.tex', 'Физички поткрепљене неуронске мреже', 'Милош Ивановић', 'manual', True)]
+latex_documents = [(master_doc, 'pinn-skripta.tex', 'Физички поткрепљене неуронске мреже - Практикум', 'Милош Ивановић', 'manual', True)]
 
 # -- Options for manual page output ------------------------------------------
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [(master_doc, 'PINN', 'Физички поткрепљене неуронске мреже', [author], 1)]
+man_pages = [(master_doc, 'PINN', 'Физички поткрепљене неуронске мреже - Практикум', [author], 1)]
 
 # -- Options for Texinfo output ----------------------------------------------
 
@@ -260,7 +297,7 @@ man_pages = [(master_doc, 'PINN', 'Физички поткрепљене неу�
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'PINN', 'Физички поткрепљене неуронске мреже', author,
+    (master_doc, 'PINN', 'Физички поткрепљене неуронске мреже - Практикум', author,
      'PINN', 'Практикум', 'Miscellaneous'),
 ]
 
