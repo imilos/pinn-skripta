@@ -15,6 +15,12 @@
 * Комплетни примери обрађени у практикуму могу се наћи на :link: https://github.com/imilos/pinn-skripta/tree/main/primeri
 * Практикум је писан у [Sphinx](http://www.sphinx-doc.org) генератору документације и читав изворни код је доступан у овом репозиторијуму. 
 
+Под условом да је инсталиран [Sphinx](http://www.sphinx-doc.org), команда за изградњу HTML, Latex и EPUB издања су следеће:
+
+    sphinx-build -b html . html/
+    sphinx-build -b latex . tex/; ./latex-custom.sh; cd tex; make; cd ..
+    sphinx-build -b epub -D extensions=sphinx.ext.imgmath,sphinxcontrib.bibtex -D imgmath_embed=True . epub/
+
 ## Питања и предлози
 
 Уколико имате било каквих питања, можете их поставити у [Issues](https://github.com/imilos/pinn-skripta/issues) одељку.
