@@ -1,3 +1,9 @@
+#
+# Preslovljavanje iz cirilice u latinicu
+# Koristi se https://pypi.org/project/srtools/ paket.
+# Milos Ivanovic 2023. 
+#
+
 #!/bin/bash
 
 LATINDIR=./lat/
