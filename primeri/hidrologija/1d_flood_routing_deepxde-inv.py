@@ -74,7 +74,7 @@ net = dde.nn.FNN(layers, activation, initializer)
 
 model = dde.Model(data, net)
 
-# Tremniranje RMSProp metodom 
+# Treniranje RMSProp metodom 
 model.compile(optimizer = optimizer, loss = loss, lr = learning_rate, external_trainable_variables=[n])
 loss_history, train_state = model.train(epochs = num_of_epochs, display_every = 1000, batch_size = batch_size, callbacks=[variable1])
 

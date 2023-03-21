@@ -26,7 +26,7 @@ author = 'Милош Ивановић'
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = 'прво'
+release = ''
 
 
 # -- General configuration ---------------------------------------------------
@@ -159,7 +159,7 @@ latex_elements = {
 \setsansfont{Liberation Sans}
 \setmonofont{FreeMono}
 
-\usepackage[left=2cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage[left=2cm,right=2cm,top=3cm,bottom=3cm]{geometry}
 ''',
     'preamble': r'''
 \usepackage[titles]{tocloft}
@@ -171,7 +171,8 @@ latex_elements = {
     'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
     'printindex': r'\footnotesize\raggedright\printindex',
     'papersize' : 'b5paper',
-    'pointsize':'10pt',
+    'pointsize':'11pt',
+    'figure_align': 'H',
 
 
 
@@ -191,8 +192,8 @@ latex_elements = {
         \vspace{2.0cm}
 
         \textit{Рецензенти} \\
-        проф. др  \\
-        доц. др 
+        проф. др Бобан Стојановић \\
+        доц. др Вишња Симић
 
         \vspace{2.5cm}
 
@@ -206,12 +207,12 @@ latex_elements = {
         \textit{Штампа} \\
         Графички атеље Сквер, Крагујевац
 
-        \vspace{2.5cm}
+        \vspace{2cm}
 
         \textit{Тираж} \\
         100 примерака
 
-        \vspace{2.5cm}
+        \vspace{2cm}
 
         ISBN XXX-XX-XXXX-XXX-X
         \end{center}
