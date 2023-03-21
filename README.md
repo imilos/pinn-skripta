@@ -5,10 +5,17 @@
 Практикум је првенствено намењен студентима мастер и докторских студија Рачунарских наука на [Природно-математичком факултету](http://www.pmf.kg.ac.rs) на [Универзитету у Крагујевцу](http://www.kg.ac.rs), али га могу користити и сви други којима је ова материја интересантна. 
 
 ## Издања
+Практикум је доступан и у ћириличном и у латиничном издању. 
 
+### Ћирилично издање
 * HTML издање практикума доступно је на: :link: https://imi.pmf.kg.ac.rs/~milos/pinn/
 * PDF издање практикума се може преузети са: :link: https://imi.pmf.kg.ac.rs/~milos/pinn/pinn-skripta.pdf
 * EPUB издање практикума се може преузети са: :link: https://imi.pmf.kg.ac.rs/~milos/pinn/pinn-skripta.epub
+
+### Латинично издање
+* HTML издање практикума доступно је на: :link: https://imi.pmf.kg.ac.rs/~milos/pinn-lat/
+* PDF издање практикума се може преузети са: :link: https://imi.pmf.kg.ac.rs/~milos/pinn-lat/pinn-skripta.pdf
+* EPUB издање практикума се може преузети са: :link: https://imi.pmf.kg.ac.rs/~milos/pinn-lat/pinn-skripta.epub
 
 ## Изворни код
 
@@ -20,6 +27,8 @@
     sphinx-build -b html . html/
     sphinx-build -b latex . tex/; ./latex-custom.sh; cd tex; make; cd ..
     sphinx-build -b epub -D extensions=sphinx.ext.imgmath,sphinxcontrib.bibtex -D imgmath_embed=True . epub/
+
+Изворни фајлови су ћирилични, а латинична верзија се добиja аутоматским пресловљавањем помоћу скрипте `preslovi.sh`. 
 
 ## Питања и предлози
 
