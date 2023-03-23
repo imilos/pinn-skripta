@@ -159,6 +159,8 @@ latex_elements = {
 \setsansfont{Liberation Sans}
 \setmonofont{FreeMono}
 
+\usepackage[figurename=Слика\,]{caption}
+
 \usepackage[left=2cm,right=2cm,top=3cm,bottom=3cm]{geometry}
 ''',
     'preamble': r'''
