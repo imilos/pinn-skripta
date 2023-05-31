@@ -91,7 +91,7 @@ master_doc = 'index'
 # Usually you set "language" from the command line for these cases.
 language = 'sr'
 
-today = '2022.'
+today = '2023.'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -207,59 +207,61 @@ latex_elements = {
         \vspace{2cm}
 
         \textit{Штампа} \\
-        Графички атеље Сквер, Крагујевац
+        ГРАФИКА ГАЛЕБ ДОО, НИШ
 
         \vspace{2cm}
 
         \textit{Тираж} \\
-        100 примерака
+        70 примерака
 
         \vspace{2cm}
 
-        ISBN XXX-XX-XXXX-XXX-X
+        ISBN-978-86-6009-096-8
         \end{center}
 
      }\sphinxmaketitle
     ''',
     'atendofbody': r'''
 
-%\cleardoublepage
-%\thispagestyle{empty}
+\cleardoublepage
+\thispagestyle{empty}
 
-%\begin{center}
+\begin{center}
 
-%\vspace{3cm}
+\vspace{3cm}
 
-%\textit{Издавач} \\
-%Природно-математички факултет Крагујевац  \\
-%Радоја Домановића 12 \\
-%http://www.pmf.kg.ac.rs \\
-%Крагујевац
+\textit{Издавач} \\
+Природно-математички факултет Крагујевац  \\
+Радоја Домановића 12 \\
+http://www.pmf.kg.ac.rs \\
+Крагујевац
 
-%\vspace{10cm}
-%\noindent\rule{14cm}{0.5pt}\\
+\vspace{9cm}
+\noindent\rule{14cm}{0.5pt}\\
 
-%\begin{Verbatim}[fontsize=\scriptsize]
-%CIP - Каталогизација у публикацији - Народна библиотека Србије, Београд
-  
-%004.42.032.24(075.8)
-  
-%ИВАНОВИЋ, Милош, 1978-
-%   Неуронске мреже подржане физичким законима - Практикум / Милош Ивановић. 
-%- Крагујевац : Природно-математички факултет, 2023 (Крагујевац : Сквер). - 
-%108 стр. : илустр. ; 25 cm
-  
-%Тираж 300. - Библиографија: стр. 105-107.
-  
-%ISBN XXX-XX-XXXX-XXX-X
-  
-%a) Неуронске мреже подржане физичким законима
-%COBISS.SR-ID 226920204
-%\end{Verbatim}
+\begin{Verbatim}[fontsize=\scriptsize]
+CIP - Каталогизација у публикацији
+Народна библиотека Србије, Београд
 
-%\noindent\rule{14cm}{0.5pt}\\
+004.032.26:[539:519.673(075.8)(076)
 
-%\end{center}
+ИВАНОВИЋ, Милош, 1978-
+    Неуронске мреже подржане физичким законима : практикум / Милош Ивановић. - 
+    Крагујевац : Природно-математички факултет, 2023 
+    (Ниш : Графика Галеб). - II, 129 стр. : илустр. ; 25 cm
+
+Tiraž 70. - Библиографија: стр. 127-129 и уз текст.
+
+ISBN 978-86-6009-096-8
+
+а) Неуронске мреже подржане физичким законима -- Вежбе
+
+COBISS.SR-ID 117042185
+\end{Verbatim}
+
+\noindent\rule{14cm}{0.5pt}\\
+
+\end{center}
     ''',
 
 }
